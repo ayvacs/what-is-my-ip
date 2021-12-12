@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>What is my IP?</title>
+</head>
+<body>
+  <div id="ip">
+    <!--  IP will be printed here  -->
+  </div>
+
+  <script type="application/javascript">
+    function getIP(json) {
+      var ip = json.ip;
+      document.getElementById("ip").innerHTML = "My IP is " + ip;
+    }
+  </script>
+
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body>
+</html>
