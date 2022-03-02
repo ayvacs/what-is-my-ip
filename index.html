@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>What is my IP?</title>
+    <meta charset="UTF-8" />
+    <title>What is my IP?</title>
 </head>
-<body>
-  <div id="ip">
-    <!--  IP will be printed here  -->
-  </div>
 
-  <script type="application/javascript">
-    function getIP(json) {
-      var ip = json.ip;
-      document.getElementById("ip").innerHTML = "My IP is " + ip;
-    }
-  </script>
+<body style="background-color:#0e1117;color:white;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';">
+    <div style="position:absolute;left:50%;top:50%;-webkit-transform:rranslate(-50%, -50%);transform:translate(-50%, -50%);" id="ip">
+</div>
+            
 
-  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <script type="application/javascript">
+        function getIP(json) {
+            var ip = json.ip;
+            document.getElementById("ip").innerHTML = `Your IP address is ${ip}.`;
+        }
+    </script>
+
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </body>
+
 </html>
